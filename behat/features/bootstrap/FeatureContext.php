@@ -26,6 +26,25 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
   }
 
   /**
+   * @When I visit the homepage
+   */
+  public function iVisitTheHomepage() {
+    $this->getSession()->visit($this->locatePath('/'));
+  }
+  /**
+   * @Then I should have access to the page
+   */
+  public function iShouldHaveAccessToThePage() {
+    $this->assertSession()->statusCodeEquals('200');
+  }
+  /**
+   * @Then I should not have access to the page
+   */
+  public function iShouldNotHaveAccessToThePage() {
+    $this->assertSession()->statusCodeEquals('403');
+  }
+
+  /**
    * Login a user to the site.
    *
    * @param $name
