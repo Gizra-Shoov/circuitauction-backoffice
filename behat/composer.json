@@ -1,0 +1,10 @@
+{
+  "name": "Behat tests for http://dev-circuit-backoffice.pantheon.io/app/#",
+  "description": "Functional testing for http://dev-circuit-backoffice.pantheon.io/app/# site.",
+  "require": {
+    "drupal/drupal-extension": "~3.0"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
