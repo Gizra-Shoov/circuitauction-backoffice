@@ -33,7 +33,7 @@ var caps = selectedCaps ? capsConfig[selectedCaps] : undefined;
 var providerPrefix = process.env.PROVIDER_PREFIX ? process.env.PROVIDER_PREFIX + '-' : '';
 var testName = selectedCaps ? providerPrefix + selectedCaps : providerPrefix + 'default';
 
-var baseUrl = process.env.BASE_URL ? process.env.BASE_URL : 'http://dev-circuit-backoffice.pantheon.io/app/#';
+var baseUrl = process.env.BASE_URL ? process.env.BASE_URL : 'http://master-6kqyz7hw2zazm.eu.platform.sh/#/dashboard/dashboard';
 
 var resultsCallback = process.env.DEBUG ? console.log : shoovWebdrivercss.processResults;
 
@@ -74,7 +74,7 @@ describe('Visual monitor testing', function() {
     client
       .url(baseUrl + '/dashboard/clients')
       .setValue('form div:nth-child(3) input', 'staff')
-      .setValue('form div:nth-child(4) input', '1')
+      .setValue('form div:nth-child(4) input', '123')
       .click('form > div.form-actions button')
       .url(baseUrl + '/dashboard/clients')
       .webdrivercss(testName + '.dashboard-clients', {
