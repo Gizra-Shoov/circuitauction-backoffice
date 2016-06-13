@@ -53,6 +53,7 @@ describe('Visual monitor testing', function() {
   it('should show the login page',function(done) {
     client
       .url(baseUrl)
+      .pause(5000)
       .webdrivercss(testName + '.login', {
         name: '1',
         screenWidth: selectedCaps == 'chrome' ? [320, 640, 960, 1200] : undefined,

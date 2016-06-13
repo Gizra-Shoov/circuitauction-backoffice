@@ -5,10 +5,7 @@ before_script:
   # Install webdriverCSS
   - cd ./visual-monitor
   - npm install
-  - cd ..
-
 
 script:
-  - cd ./visual-monitor
   - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
   - PROVIDER_PREFIX=browserstack SELECTED_CAPS=ie11 mocha
